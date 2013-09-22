@@ -43,7 +43,7 @@ Cronjobs installation:
     >>$ sudo crontab -e
     
     add the following line (the script will be run evert 2 mins.
-        */2 * * * * bash <path to the folder>/check_is_up.bh
+        */2 * * * * python <path to the folder>/check_is_up.py
         
 ### Configuration check_is_up.py
 
