@@ -25,7 +25,13 @@ If the comparison is not succesful then
     To a objective web url  the following meta line can be added in the header
     
     <meta name="check_it_is_up" content="check_it_is_up_key_value">
+
+### Dependencies
     
+    Python 2.7
+    urllib2
+    Beatifulsoup -- sudo apt-get install python-beautifulsoup    
+        
 ### Configuration cronjobs
 
 The script is run as a cronjob with root privileges
@@ -81,6 +87,12 @@ to secure
 
 to edit
 >>$ sudo bash un_root.bh
+
+### Log file output
+A subfolder /log is created 
+
+The log files contain the info of each time check it is up has been run
+and the apache and mysql log files info
 
 
 

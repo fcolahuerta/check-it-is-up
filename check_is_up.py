@@ -28,6 +28,7 @@ def main():
     
     check_it_is_up = check_is_up()
     
+    ### Declare the actions to run
     check_it_is_up.action.options(runBash = False , 
                                    MYSQL = True,
                                    MUNIN = True,
@@ -38,19 +39,21 @@ def main():
                                    runBash_post = False,
                                    disk_usage = True)
     
+    ### Declare the logs to copy
     check_it_is_up.action.log_options(log_APACHE = "/var/log/apache2/error.log",
                                       log_MySQL = "/var/log/mysql.log")    
     
+    ### Declare webs to check
     """
     check_it_is_up.add_web_to_check(name = "name", 
                                      url = "http://www.yourweb.com",
                                      key = "title",
                                      key_result = "Title value")
-                                        
+    """                                    
     check_it_is_up.add_web_to_check_meta_tag(name = "name_meta", 
-                                             url = "http://www.yourweb.com")                                                                          
-    """ 
+                                             url = "http://www.yourweb.com")                                                                           
     
+    ### Check it
     check_it_is_up.check_are_up()
     
     return
