@@ -5,6 +5,10 @@
 ###
 ### License: GNU GPL v3
 ### Author: FLC 2013
+###
+### Simple python script that
+### can be run in a web LAMP linux server.
+###
 ##################################
 
 import urllib2
