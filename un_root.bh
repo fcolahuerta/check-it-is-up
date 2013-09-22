@@ -1,0 +1,11 @@
+sudo chown fcofreelance:fcofreelance check_is_up.bh
+sudo chmod 665 check_is_up.bh
+
+sudo chown fcofreelance:fcofreelance check_is_up.py
+sudo chmod 665 check_is_up.py
+
+sudo chown fcofreelance:fcofreelance _check_is_up_post.bh
+sudo chmod 665 _check_is_up_post.bh
+
+sudo chown fcofreelance:fcofreelance _check_is_up_pre.bh
+sudo chmod 665 _check_is_up_pre.bh

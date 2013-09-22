@@ -1,0 +1,17 @@
+sudo chown root:root check_is_up.bh
+sudo chmod 700 check_is_up.bh
+sudo chmod +x check_is_up.bh
+
+sudo chown root:root check_is_up.py
+sudo chmod 700 check_is_up.py
+sudo chmod +x check_is_up.py
+
+sudo chown root:root _check_is_up_post.bh
+sudo chmod 700 _check_is_up_post.bh
+sudo chmod +x _check_is_up_post.bh
+
+sudo chown root:root _check_is_up_pre.bh
+sudo chmod 700 _check_is_up_pre.bh
+sudo chmod +x _check_is_up_pre.bh
+
+
