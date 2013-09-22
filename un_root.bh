@@ -1,6 +1,3 @@
-sudo chown fcofreelance:fcofreelance check_is_up.bh
-sudo chmod 665 check_is_up.bh
-
 sudo chown fcofreelance:fcofreelance check_is_up.py
 sudo chmod 665 check_is_up.py
 
