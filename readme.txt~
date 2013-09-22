@@ -1,0 +1,43 @@
+###
+### check it is up
+###
+### License: GNU GPL v3
+### Author: FLC 2013
+##################################
+
+Is a simple python script that can be run in a web LAMP linux server.
+
+###Functions
+
+In the server were it runs check if a web url is accesible.
+
+If not restart the services and make a copy of the last lines of the log files.
+
+### Checking the web
+
+To check the web via Beautiful soup finds a meta tag and compared with a value.
+If the comparison is not succesful then
+
+    * It makes a copy of the last lines of the apache log and mysql
+    * Restart the services of the LAMP server
+    
+ Example:
+    To a objective web url  the following meta line can be added in the header
+    
+    <meta name="check_it_is_up" content="check_it_is_up_key_value">
+    
+### Configuration cronjobs
+
+The script is run as a cronjob with root privileges
+
+Cronjobs installation:
+    
+    add the followin line to cronjobs
+    
+    >>$ sudo crontab -e
+    
+    add the following line (the script will be run evert 2 mins.
+        */2 * * * * bash <path to the folder>/check_is_up.bh
+        
+### Configuration check_is_up.py       
+      
