@@ -1,5 +1,5 @@
 ###
-### check it is up
+### check it is up 
 ###
 ### License: GNU GPL v3
 ### Author: FLC 2013
@@ -55,6 +55,8 @@ Block options, declare which sevices want to e restarted
                                    runBash_post = False,
                                    disk_usage = True)
      
+     
+     
 Block logs, declare which logs want to be readed, and the route
                                    
     check_it_is_up.action.log_options(log_APACHE = "/var/log/apache2/error.log",
@@ -68,7 +70,21 @@ Block add web, adds a url to check via the title
       
 Block add meta tag, adds a url to check via the header meta tag check_it_is_up
     check_it_is_up.add_web_to_check_meta_tag(name = "name_meta", 
-                                             url = "http://www.yourweb.com")                                                                                                          
+                                             url = "http://www.yourweb.com")      
+                                             
+### Security
+
+It is convinient to secure the scripts as root user
+
+to secure
+>>$ sudo bash as_root.bh
+
+to edit
+>>$ sudo bash un_root.bh
+
+
+
+
 
 
        

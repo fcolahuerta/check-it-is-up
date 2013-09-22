@@ -39,5 +39,37 @@ Cronjobs installation:
     add the following line (the script will be run evert 2 mins.
         */2 * * * * bash <path to the folder>/check_is_up.bh
         
-### Configuration check_is_up.py       
+### Configuration check_is_up.py
+
+The configuration is done in the main file check_is_up.py first function main()
+
+Block options, declare which sevices want to e restarted
+
+    check_it_is_up.action.options(runBash = False , 
+                                   MYSQL = True,
+                                   MUNIN = True,
+                                   APACHE = True,
+                                   VARNISH = True,
+                                   SpamASASSIN = True,
+                                   POSTFIX = True,
+                                   runBash_post = False,
+                                   disk_usage = True)
+     
+Block logs, declare which logs want to be readed, and the route
+                                   
+    check_it_is_up.action.log_options(log_APACHE = "/var/log/apache2/error.log",
+                                      log_MySQL = "/var/log/mysql.log")   
+           
+Block add web, adds a url to check via the title
+    check_it_is_up.add_web_to_check(name = "name", 
+                                     url = "http://www.yourweb.com",
+                                     key = "title",
+                                     key_result = "Title value") 
+      
+Block add meta tag, adds a url to check via the header meta tag check_it_is_up
+    check_it_is_up.add_web_to_check_meta_tag(name = "name_meta", 
+                                             url = "http://www.yourweb.com")                                                                                                          
+
+
+       
       
